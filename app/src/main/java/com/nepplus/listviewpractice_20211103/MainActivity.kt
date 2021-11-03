@@ -56,7 +56,14 @@ class MainActivity : AppCompatActivity() {
 
         studenListView.setOnItemLongClickListener { parent, view, position, id ->
             val longClickedStudent = mStudentList[position]
-            Toast.makeText(this, "${longClickedStudent}학생이 길게 눌림", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "${longClickedStudent}학생이 길게 눌림", Toast.LENGTH_SHORT).show()
+
+//            길게 눌린 학생을 목록에서 제거 => 리스트뷰에서도 빠지게 해보자.
+            mStudentList.remove(longClickedStudent)
+
+//            리스트뷰 -> 어댑터에게 새로고침 시키자. (인지시키자)
+            mStudentAdapter.notifyDataSetChanged()
+
 
 //            boolean (true/false )을 결과로 지정해줘야함.
             return@setOnItemLongClickListener true
