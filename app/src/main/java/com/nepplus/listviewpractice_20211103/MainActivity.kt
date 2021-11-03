@@ -3,13 +3,14 @@ package com.nepplus.listviewpractice_20211103
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.adapter.StatefulAdapter
+import com.nepplus.listviewpractice_20211103.adapters.StudentAdapter
 import com.nepplus.listviewpractice_20211103.datas.StudentData
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     val mStudentList = ArrayList<StudentData>()
-    lateinit var mStudentAdapter : StudentData
+    lateinit var mStudentAdapter : StudentAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         mStudentList.add( StudentData("차수나",1977,"서울시 성북구") )
         mStudentList.add( StudentData("김경식",1992,"서울시 중랑구") )
 
-        mStudentAdapter = StudentData(this, R.layout.student_list_item, mStudentList)
+        mStudentAdapter = StudentAdapter(this, R.layout.student_list_item, mStudentList)
         studenListView.adapter = mStudentAdapter
 
 
