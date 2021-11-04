@@ -35,7 +35,7 @@ class StudentAdapter (
 //        cf : ArrayList => 0번칸 ~ 갯수~1번칸 까지 존재함.
         val data = mList[ position ]
 
-        Log.d("학새이름", data.name)
+        Log.d("학생이름", data.name)
 
 //        student_
         val txtName = row.findViewById<TextView>(R.id.txtName)

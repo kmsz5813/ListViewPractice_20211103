@@ -1,8 +1,10 @@
 package com.nepplus.listviewpractice_20211103.datas
 
+import java.io.Serializable
+
 class StudentData(val name: String,
                   val birthYear: Int,
-                  val address: String) {
+                  val address: String) : Serializable {
 
 //    함수로 학생의 기능을 만들자.
 

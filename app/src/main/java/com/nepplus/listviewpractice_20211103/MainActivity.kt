@@ -46,13 +46,15 @@ class MainActivity : AppCompatActivity() {
 
 //            상세 화면 이동
             val myIntent = Intent(this,ViewStudentMainActivity::class.java)
-            myIntent.putExtra("name", clickedStudent.name)
-            myIntent.putExtra("birthYear", clickedStudent.birthYear)
-            myIntent.putExtra("address", clickedStudent.address)
+//            myIntent.putExtra("name", clickedStudent.name)
+//            myIntent.putExtra("birthYear", clickedStudent.birthYear)
+//            myIntent.putExtra("address", clickedStudent.address)
+
+            myIntent.putExtra("student", clickedStudent)
 
             startActivity(myIntent)
 
-            Toast.makeText(this, "${clickedStudent.name} 학생 클릭됨", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "${clickedStudent.name} 학생 클릭됨", Toast.LENGTH_SHORT).show()
 
         }
 
